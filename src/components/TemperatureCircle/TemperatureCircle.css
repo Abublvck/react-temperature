@@ -1,0 +1,49 @@
+.temperature-circle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperature-circle {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  
+  /* Граница со стеклянным эффектом */
+  border: 3px solid rgba(255, 255, 255, 0.25);
+
+  /* Плавный переход цвета фона и свечения при смене градусов */
+  transition: 
+    background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s ease;
+}
+
+/* Лёгкое микро-увеличение при наведении */
+.temperature-circle:hover {
+  transform: scale(1.03);
+}
+
+.temperature-value {
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  font-variant-numeric: tabular-nums;
+}
+
+.temperature-unit {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.25rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
